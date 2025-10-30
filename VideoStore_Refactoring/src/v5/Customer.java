@@ -43,6 +43,17 @@ public class Customer
 			frequentRenterPoints += each.getFrequentRentalPoints();
 		return frequentRenterPoints;
 	}
+	public double getTotalAmount() {
+		double total = 0;
+		for (Rental each : _rentals) total += each.getAmount();
+		return total;
+	}
+
+	public int getTotalFrequentRenterPoints() {
+		int points = 0;
+		for (Rental each : _rentals) points += each.getFrequentRentalPoints();
+		return points;
+	}
 
 	public double getTotalAmount()
 	{
