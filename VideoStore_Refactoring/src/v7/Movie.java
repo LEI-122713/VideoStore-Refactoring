@@ -2,7 +2,17 @@ package v7;
 
 public class Movie {
 
-	public enum Code {REGULAR, CHILDRENS, NEW_RELEASE};
+
+    public double getAmount(Rental rental) {
+        return getRentalAmount(rental._daysRented);
+    }
+
+
+    public int getFrequentRenterPoints(Rental rental) {
+        return getFrequentRenterPoints(rental._daysRented);
+    }
+
+    public enum Code {REGULAR, CHILDRENS, NEW_RELEASE};
 	
 	private String _title;
 	private Code _priceCode;
